@@ -45,7 +45,7 @@ const assurances = [
     <section class="bg-white py-10 md:py-16">
       <div class="container grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div class="animate-fade-up">
-          <div class="overflow-hidden rounded-xl border border-line"><ProductVisual :visual="product.visual" size="hero" /></div>
+          <div class="overflow-hidden rounded-lg border border-line"><ProductVisual :visual="product.visual" size="hero" /></div>
         </div>
         <div class="animate-fade-up [animation-delay:120ms]">
           <div class="flex flex-wrap items-center gap-3">
@@ -96,7 +96,7 @@ const assurances = [
     <section v-if="product.specs" class="section bg-white">
       <div class="container grid gap-10 lg:grid-cols-[1fr_2fr]">
         <SectionHeading eyebrow="Specifications" title="Technical details" />
-        <dl v-reveal class="overflow-hidden rounded-xl border border-line">
+        <dl v-reveal class="overflow-hidden rounded-lg border border-line">
           <div v-for="(s, i) in product.specs" :key="s.label" :class="['grid gap-1 px-5 py-4 sm:grid-cols-[220px_1fr] sm:gap-6', i % 2 ? 'bg-white' : 'bg-surface']">
             <dt class="font-semibold text-ink-900">{{ s.label }}</dt>
             <dd class="text-ink-600">{{ s.value }}</dd>

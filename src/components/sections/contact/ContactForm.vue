@@ -18,7 +18,7 @@ const topic = ref({ datasheet: topics[1], support: topics[3] }[q(route.query.top
 <template>
   <section class="section bg-surface">
     <div class="container grid gap-10 lg:grid-cols-[1.5fr_1fr]">
-      <div v-reveal class="rounded-xl border border-line bg-white p-6 md:p-10">
+      <div v-reveal class="rounded-lg border border-line bg-white p-6 md:p-10">
         <h2 class="h-section">Request a quote or ask a question</h2>
         <p class="mt-2 text-ink-500">Tell us what you need and our team will get back to you.</p>
 
@@ -76,12 +76,12 @@ const topic = ref({ datasheet: topics[1], support: topics[3] }[q(route.query.top
       </div>
 
       <aside v-reveal="100" class="space-y-6">
-        <div class="rounded-xl bg-ink-900 p-8 text-white">
+        <div class="rounded-lg bg-ink-900 p-8 text-white">
           <h2 class="text-lg font-bold">Get in touch</h2>
           <ul class="mt-6 space-y-5 text-ink-200">
             <li class="flex gap-4">
               <EnvelopeIcon class="h-6 w-6 shrink-0 text-brand-400" />
-              <a href="mailto:hello@zieonenergies.com" class="hover:text-white">hello@zieonenergies.com</a>
+              <a href="mailto:hello@zieonmetering.com" class="hover:text-white">hello@zieonmetering.com</a>
             </li>
             <li class="flex gap-4">
               <MapPinIcon class="h-6 w-6 shrink-0 text-brand-400" />
@@ -93,7 +93,14 @@ const topic = ref({ datasheet: topics[1], support: topics[3] }[q(route.query.top
             </li>
           </ul>
         </div>
-        <img src="/images/team-office.jpg" alt="" loading="lazy" class="hidden aspect-[4/3] w-full object-cover lg:block rounded-lg" />
+        <div id="careers" class="scroll-mt-28 rounded-lg border border-line bg-white p-8">
+          <h2 class="font-display text-lg font-semibold">Careers</h2>
+          <p class="mt-2 text-sm leading-relaxed text-ink-500">
+            Interested in working with us? Send your CV to
+            <a href="mailto:hello@zieonmetering.com" class="font-medium text-brand-700 hover:underline">hello@zieonmetering.com</a>.
+          </p>
+        </div>
+        <img src="/images/distribution-board.jpg" alt="" loading="lazy" class="hidden aspect-[4/3] w-full rounded-lg object-cover lg:block" />
       </aside>
     </div>
   </section>

@@ -10,7 +10,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../views/ProductDetailView.vue"),
     props: true,
   },
-  // Old-style links (as used on zieonenergies.com)
+  // Old-style /product links
   { path: "/product", redirect: "/products" },
   { path: "/product/:slug", redirect: (to) => `/products/${to.params.slug}` },
   { path: "/solutions", name: "Solutions", component: () => import("../views/SolutionsView.vue") },
@@ -26,7 +26,7 @@ const router = createRouter({
   scrollBehavior(to, _from, savedPosition) {
     if (savedPosition) return savedPosition;
     // Leave room for the fixed header when jumping to an in-page anchor
-    if (to.hash) return { el: to.hash, top: window.innerWidth >= 1024 ? 124 : 80, behavior: "smooth" };
+    if (to.hash) return { el: to.hash, top: window.innerWidth >= 1024 ? 96 : 80, behavior: "smooth" };
     return { top: 0 };
   },
 });

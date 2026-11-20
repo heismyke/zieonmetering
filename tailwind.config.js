@@ -9,47 +9,48 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Inter"', "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        sans: ['"Manrope"', "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        display: ['"Space Grotesk"', '"Manrope"', "system-ui", "sans-serif"],
       },
       colors: {
-        // Brand orange sampled from the Zenerlink mark
+        // Signal teal: Zieon Metering's accent (600 on white is 5.4:1)
         brand: {
-          50: "#fdf3ec",
-          100: "#fbe3d2",
-          200: "#f6c3a0",
-          300: "#ef9c66",
-          400: "#e67d3a",
-          500: "#d5651b",
-          600: "#b95412",
-          700: "#934111",
-          800: "#713414",
-          900: "#4a2410",
+          50: "#ecfdf9",
+          100: "#cdf8ee",
+          200: "#9cefdc",
+          300: "#5fdcc5",
+          400: "#27c0a9",
+          500: "#0ea38f",
+          600: "#0b8273",
+          700: "#0c685d",
+          800: "#0f534b",
+          900: "#10443f",
         },
-        // Gold accent sampled from the ZIEVON logotype
+        // Amber for "coming soon"
         gold: {
-          400: "#e0a548",
-          500: "#cd8c2a",
-          600: "#a96f1c",
+          400: "#f5b544",
+          500: "#d9921a",
+          600: "#b07414",
         },
-        // Deep navy used for dark bands, utility bar and footer
+        // Graphite neutrals
         ink: {
-          50: "#f3f5f8",
-          100: "#e4e8ee",
-          200: "#c9d1dc",
-          300: "#9aa6b6",
-          400: "#6b7889",
-          500: "#4a5667",
-          600: "#334052",
-          700: "#1f2b3b",
-          800: "#13202e",
-          900: "#0b1622",
+          50: "#f4f5f6",
+          100: "#e7e9ec",
+          200: "#cfd3d8",
+          300: "#a8afb7",
+          400: "#7b838d",
+          500: "#58606b",
+          600: "#3e4550",
+          700: "#2a3039",
+          800: "#1b2027",
+          900: "#111419",
         },
-        surface: "#f4f5f7",
-        line: "#e2e5e9",
+        surface: "#f5f6f7",
+        line: "#e2e5e8",
       },
       boxShadow: {
-        card: "0 1px 3px rgba(11,22,34,0.05)",
-        "card-hover": "0 8px 30px rgba(11,22,34,0.08)",
+        card: "0 1px 2px rgba(17,20,25,0.06)",
+        "card-hover": "0 10px 30px rgba(17,20,25,0.10)",
       },
       keyframes: {
         "fade-up": {

@@ -9,7 +9,7 @@ withDefaults(defineProps<{ visual: ProductVisual; size?: "card" | "hero" }>(), {
   <div
     :class="[
       'relative flex w-full items-center justify-center overflow-hidden',
-      visual.kind === 'photo' ? 'bg-ink-100' : 'bg-gradient-to-b from-surface to-ink-100',
+      visual.kind === 'photo' ? 'bg-ink-100' : 'bg-grid bg-surface',
       size === 'card' ? 'aspect-[4/3]' : 'aspect-square md:aspect-[5/4]',
     ]"
   >

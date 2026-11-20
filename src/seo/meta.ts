@@ -5,15 +5,13 @@ import { products, findProduct, type Product } from "../data/products";
 export const SITE = {
   name: "Zieon Metering",
   legalName: "Zieon Metering Technologies Ltd",
-  alternateNames: ["Zieon Metering Technologies", "Zieon Metering Technologies Ltd", "Zieonenergy meters"],
+  alternateNames: ["Zieon Metering Technologies", "Zieon Metering Technologies Ltd", "Zieon meters"],
   // Override per environment with VITE_SITE_URL (no trailing slash)
   url: "https://www.zieonmetering.com",
-  email: "hello@zieonenergies.com",
+  email: "hello@zieonmetering.com",
   locale: "en_NG",
   image: "/og/default.jpg",
   logo: "/brand/icon-512.png",
-  parent: { name: "Zieon Energies Ltd", url: "https://www.zieonenergies.com" },
-  sister: { name: "Zenerlink Technologies Ltd", url: "https://www.zenerlink.com" },
 };
 
 export interface PageMeta {
@@ -33,7 +31,7 @@ const staticPages: Record<string, PageMeta> = {
   "/products": {
     title: "Prepaid Meters & Energy Hardware",
     description:
-      "The Zieonenergy Prepaid Meter, Solar Prepaid Meter, Next-Gen LoRaWAN Meter and home energy hardware. Compare specifications and request a quote.",
+      "The Zieon Prepaid Meter, Solar Prepaid Meter, LoRaWAN Meter and home energy hardware. Compare specifications and request a quote.",
   },
   "/solutions": {
     title: "Metering Solutions for Homes, Estates, Utilities & Businesses",
@@ -53,7 +51,7 @@ const staticPages: Record<string, PageMeta> = {
   "/contact": {
     title: "Request a Quote or Contact Us",
     description:
-      "Request a quote for prepaid meters, order for your home or estate, or ask our team a question. Email hello@zieonenergies.com.",
+      "Request a quote for prepaid meters, order for your home or estate, or ask our team a question. Email hello@zieonmetering.com.",
   },
 };
 
@@ -82,7 +80,7 @@ function productMeta(p: Product, siteUrl: string): PageMeta {
         name: p.name,
         description: p.description,
         category: p.category,
-        brand: { "@type": "Brand", name: "Zieonenergy" },
+        brand: { "@type": "Brand", name: "Zieon" },
         manufacturer: { "@id": `${siteUrl}/#organization` },
         url,
         image: `${siteUrl}${p.visual.kind === "photo" ? p.visual.src : SITE.image}`,
@@ -157,7 +155,6 @@ export function siteJsonLd(siteUrl = SITE.url): Record<string, unknown>[] {
       email: SITE.email,
       areaServed: { "@type": "Country", name: "Nigeria" },
       knowsAbout: ["Prepaid electricity meters", "Smart metering", "Solar prepaid meters", "STS tokens", "LoRaWAN"],
-      parentOrganization: { "@type": "Organization", name: SITE.parent.name, url: SITE.parent.url },
       contactPoint: { "@type": "ContactPoint", email: SITE.email, contactType: "sales", areaServed: "NG", availableLanguage: "English" },
     },
     {

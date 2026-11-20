@@ -16,10 +16,10 @@ const productsFor = (slugs: string[]) => slugs.map(findProduct).filter((p) => p 
       eyebrow="Solutions"
       title="Metering for every customer"
       intro="Homes, landlords and estates, utilities and DisCos, and businesses: the same automatic prepaid experience, sized for you."
-      image="/images/solar-aerial.jpg"
+      image="/images/utility-pole.jpg"
       :breadcrumbs="[{ label: 'Solutions' }]"
     />
-    <nav aria-label="Solutions" class="sticky top-16 z-30 border-b border-line bg-white/95 backdrop-blur lg:top-[108px]">
+    <nav aria-label="Solutions" class="sticky top-16 z-30 border-b border-line bg-white/95 backdrop-blur lg:top-[72px]">
       <ul class="container flex gap-6 overflow-x-auto py-3 text-sm font-medium text-ink-600">
         <li v-for="s in solutions" :key="s.id"><a :href="`#${s.id}`" class="whitespace-nowrap hover:text-brand-600">{{ s.title }}</a></li>
       </ul>
@@ -31,7 +31,7 @@ const productsFor = (slugs: string[]) => slugs.map(findProduct).filter((p) => p 
       :class="['section scroll-mt-32', i % 2 ? 'bg-surface' : 'bg-white']"
     >
       <div class="container grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <img :src="s.image" alt="" loading="lazy" :class="['aspect-[4/3] w-full rounded-xl object-cover', i % 2 && 'lg:order-2']" />
+        <img :src="s.image" alt="" loading="lazy" :class="['aspect-[4/3] w-full rounded-lg object-cover', i % 2 && 'lg:order-2']" />
         <div>
           <p class="eyebrow">For {{ s.title.toLowerCase() }}</p>
           <h2 class="h-section mt-3">{{ s.short }}</h2>
@@ -56,7 +56,6 @@ const productsFor = (slugs: string[]) => slugs.map(findProduct).filter((p) => p 
     <CtaBanner
       title="Have a bigger project?"
       text="Estates, utilities and businesses: tell us how many meters you need and we'll plan it with you."
-      image="/images/field-technician.jpg"
       :primary="{ label: 'Request a quote', to: '/contact' }"
     />
   </SiteLayout>

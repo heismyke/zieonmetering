@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "How do I buy units for my meter?",
     answer:
-      "Buy online on Zenerlink, our sister company, or from any vendor you already use. The token is sent to your meter automatically, so there's nothing to type.",
+      "Buy online on Zenerlink or from any vendor you already use. The token is sent to your meter automatically, so there's nothing to type.",
   },
   {
     question: "Is installation included?",

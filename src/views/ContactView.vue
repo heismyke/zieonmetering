@@ -10,7 +10,7 @@ import ContactForm from "../components/sections/contact/ContactForm.vue";
       eyebrow="Contact"
       title="Request a quote"
       intro="Order meters for your home, estate or network, ask for a datasheet, or get help from our team."
-      image="/images/team-office.jpg"
+      image="/images/meter-installation.jpg"
       :breadcrumbs="[{ label: 'Contact' }]"
     />
     <ContactForm />

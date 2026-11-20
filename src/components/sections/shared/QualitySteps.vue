@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import SectionHeading from "../../ui/SectionHeading.vue";
-
-// How a meter gets from our lab to your wall. Plain steps, no badges.
+// How a meter gets from our bench to your wall. Plain steps, no badges.
 const steps = [
   { title: "Design", text: "Engineered for the Nigerian grid, from the circuit board to the case." },
   { title: "Test", text: "Meters are tested before they ship to you." },
@@ -11,21 +9,23 @@ const steps = [
 </script>
 
 <template>
-  <section class="section bg-surface">
-    <div class="container grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-      <div>
-        <SectionHeading eyebrow="Quality" title="Built with care, from lab to wall" intro="We design, test, install and support every meter ourselves." />
-        <ol class="mt-10 divide-y divide-line border-y border-line">
-          <li v-for="(s, i) in steps" :key="s.title" v-reveal="i * 80" class="grid grid-cols-[48px_1fr] gap-4 py-5">
-            <span class="text-sm font-semibold text-brand-500">0{{ i + 1 }}</span>
-            <div>
-              <p class="font-semibold text-ink-900">{{ s.title }}</p>
-              <p class="mt-1 text-sm leading-relaxed text-ink-500">{{ s.text }}</p>
-            </div>
-          </li>
-        </ol>
+  <section class="section bg-white">
+    <div class="container">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-end">
+        <div>
+          <p class="eyebrow">Quality</p>
+          <h2 class="h-section mt-4">From our bench to your wall</h2>
+        </div>
+        <p class="lead">We design, test, install and support every meter ourselves, so one team is responsible from start to finish.</p>
       </div>
-      <img v-reveal="120" src="/images/engineer-lab.jpg" alt="An engineer testing hardware in the lab" loading="lazy" class="aspect-[4/5] w-full rounded-xl object-cover lg:aspect-[4/5]" />
+      <ol class="mt-12 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+        <li v-for="(s, i) in steps" :key="s.title" v-reveal="i * 80" class="bg-white p-7">
+          <span class="font-display text-3xl font-semibold text-brand-600">0{{ i + 1 }}</span>
+          <p class="mt-4 font-display text-lg font-semibold text-ink-900">{{ s.title }}</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-500">{{ s.text }}</p>
+        </li>
+      </ol>
+      <img v-reveal src="/images/meter-installation.jpg" alt="Electricians fitting meter panels on a building" loading="lazy" class="mt-8 aspect-[21/8] w-full rounded-lg object-cover" />
     </div>
   </section>
 </template>

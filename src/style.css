@@ -21,7 +21,7 @@
   h2,
   h3,
   h4 {
-    @apply font-medium tracking-tight text-balance;
+    @apply font-display font-semibold tracking-tight text-balance;
   }
 
   :focus-visible {
@@ -37,16 +37,20 @@
 
   /* Typography */
   .eyebrow {
-    @apply inline-block text-xs font-medium uppercase tracking-[0.14em] text-ink-400;
+    @apply inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-[0.16em] text-brand-700;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-brand-500;
   }
   .h-display {
-    @apply text-3xl font-medium leading-[1.12] sm:text-4xl lg:text-[44px];
+    @apply font-display text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-[52px];
   }
   .h-section {
-    @apply text-2xl font-medium leading-tight md:text-[32px];
+    @apply font-display text-2xl font-semibold leading-tight md:text-[34px];
   }
   .h-card {
-    @apply text-lg font-medium leading-snug;
+    @apply font-display text-lg font-semibold leading-snug;
   }
   .lead {
     @apply text-base leading-relaxed text-ink-500 md:text-[17px];
@@ -54,16 +58,16 @@
 
   /* Buttons */
   .btn {
-    @apply inline-flex min-w-[160px] items-center justify-center gap-2 rounded px-6 py-2.5 text-sm font-medium transition-colors duration-200;
+    @apply inline-flex min-w-[160px] items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition-colors duration-200;
   }
   .btn-primary {
-    @apply btn bg-brand-500 text-white hover:bg-brand-600;
+    @apply btn bg-brand-600 text-white hover:bg-brand-700;
   }
   .btn-dark {
     @apply btn bg-ink-900 text-white hover:bg-ink-700;
   }
   .btn-outline {
-    @apply btn bg-ink-50 text-ink-900 hover:bg-ink-100;
+    @apply btn border border-ink-300 bg-white text-ink-900 hover:border-ink-900;
   }
   .btn-outline-light {
     @apply btn bg-white/90 text-ink-900 backdrop-blur hover:bg-white;
@@ -96,6 +100,20 @@
   .badge {
     @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider;
   }
+}
+
+/* Faint technical grid behind heroes and bands */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(17, 20, 25, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 20, 25, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* Scroll reveal (see src/directives/reveal.ts) */

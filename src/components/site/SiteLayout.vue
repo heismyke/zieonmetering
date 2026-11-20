@@ -6,8 +6,8 @@ import SiteFooter from "./SiteFooter.vue";
 <template>
   <div class="flex min-h-screen flex-col">
     <SiteHeader />
-    <!-- The header is fixed: 64px on phones, top bar + 72px on desktop -->
-    <main class="flex-1 pt-16 lg:pt-[108px]">
+    <!-- The header is fixed: 64px on phones, 72px on desktop -->
+    <main class="flex-1 pt-16 lg:pt-[72px]">
       <slot />
     </main>
     <SiteFooter />

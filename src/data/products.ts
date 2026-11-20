@@ -25,13 +25,13 @@ export interface Product {
 export const products: Product[] = [
   {
     slug: "prepaid-meter",
-    name: "Zieonenergy Prepaid Meter",
+    name: "Zieon Prepaid Meter",
     category: "Meters",
     audiences: ["Homes", "Landlords & estates", "Utilities & DisCos", "Businesses"],
     status: "Available",
     tagline: "Payment to power in under 90 seconds — no keypad, no 20-digit codes.",
     description:
-      "The Zieonenergy Prepaid Meter receives tokens automatically the moment you pay, with real-time visibility of your consumption.",
+      "The Zieon Prepaid Meter receives tokens automatically the moment you pay, with real-time visibility of your consumption.",
     highlights: [
       "Automatic token delivery — nothing to type",
       "Real-time consumption tracking",
@@ -52,7 +52,7 @@ export const products: Product[] = [
   },
   {
     slug: "solar-prepaid-meter",
-    name: "Zieonenergy Solar Prepaid Meter",
+    name: "Zieon Solar Prepaid Meter",
     category: "Meters",
     audiences: ["Homes", "Landlords & estates", "Businesses"],
     status: "Coming soon",
@@ -70,7 +70,7 @@ export const products: Product[] = [
   },
   {
     slug: "next-gen-lorawan-meter",
-    name: "Next-Gen LoRaWAN Meter",
+    name: "Zieon LoRaWAN Meter",
     category: "Meters",
     audiences: ["Landlords & estates", "Utilities & DisCos", "Businesses"],
     status: "In development",
@@ -121,7 +121,7 @@ export const products: Product[] = [
     description:
       "Generate your own power during the day and track solar production alongside grid consumption in a single view.",
     highlights: ["Plug-and-play installation", "Solar and grid in one dashboard", "Pairs with Zieon Home Battery"],
-    visual: { kind: "photo", src: "/images/solar-panels.jpg" },
+    visual: { kind: "photo", src: "/images/solar-home.jpg" },
     cta: { label: "Notify me", to: "/contact" },
   },
 ];

@@ -1,28 +1,33 @@
 <script setup lang="ts">
 import { BanknotesIcon, SignalIcon, BoltIcon, ArrowUpRightIcon } from "@heroicons/vue/24/outline";
-import SectionHeading from "../../ui/SectionHeading.vue";
 import { ZENERLINK_URL } from "../../../data/navigation";
 
 const steps = [
-  { icon: BanknotesIcon, title: "Pay for units", text: "Buy online on Zenerlink or from any vendor you already use." },
-  { icon: SignalIcon, title: "Token sent automatically", text: "The token goes straight to your meter. Nothing to type." },
-  { icon: BoltIcon, title: "Power on", text: "Your meter loads the units and the power comes on, usually in under 90 seconds." },
+  { icon: BanknotesIcon, title: "Pay for units", text: "Online on Zenerlink, or from any vendor you already use." },
+  { icon: SignalIcon, title: "Token sent automatically", text: "It goes straight to the meter. Nothing to type." },
+  { icon: BoltIcon, title: "Power on", text: "The meter loads the units, usually in under 90 seconds." },
 ];
 </script>
 
 <template>
-  <section class="section bg-white">
+  <section class="section bg-grid-dark bg-ink-900 text-white">
     <div class="container">
-      <SectionHeading eyebrow="How it works" title="From payment to power, automatically" />
-      <ol class="mt-12 grid gap-6 md:grid-cols-3">
-        <li v-for="(s, i) in steps" :key="s.title" v-reveal="i * 100" class="relative rounded-xl border border-line bg-surface p-7">
-          <span class="absolute right-6 top-6 text-4xl font-semibold text-ink-100">{{ i + 1 }}</span>
-          <component :is="s.icon" class="h-8 w-8 text-brand-500" />
-          <h3 class="h-card mt-5">{{ s.title }}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink-500">{{ s.text }}</p>
+      <p class="eyebrow !text-brand-300">How it works</p>
+      <h2 class="h-section mt-4 text-white">From payment to power, automatically</h2>
+      <ol class="relative mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+        <span class="absolute left-0 right-0 top-6 hidden h-px bg-white/15 md:block" />
+        <li v-for="(s, i) in steps" :key="s.title" v-reveal="i * 100" class="relative">
+          <span class="relative flex h-12 w-12 items-center justify-center rounded-md bg-brand-600">
+            <component :is="s.icon" class="h-6 w-6 text-white" stroke-width="1.5" />
+          </span>
+          <p class="mt-6 font-display text-sm font-semibold text-brand-300">Step 0{{ i + 1 }}</p>
+          <h3 class="mt-1 font-display text-xl font-semibold text-white">{{ s.title }}</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink-300">{{ s.text }}</p>
         </li>
       </ol>
-      <a :href="ZENERLINK_URL" target="_blank" rel="noopener" class="link-arrow mt-8">Buy units online on Zenerlink <ArrowUpRightIcon /></a>
+      <a :href="ZENERLINK_URL" target="_blank" rel="noopener" class="mt-12 inline-flex items-center gap-2 text-sm font-semibold text-white underline-offset-4 hover:underline">
+        Buy units online on Zenerlink <ArrowUpRightIcon class="h-4 w-4" />
+      </a>
     </div>
   </section>
 </template>
