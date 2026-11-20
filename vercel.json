@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/product", "destination": "/products", "permanent": true },
+    { "source": "/product/:slug", "destination": "/products/:slug", "permanent": true }
+  ]
+}
