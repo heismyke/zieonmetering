@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "When will Zieon meters be available in my area?",
     answer:
-      "We are rolling out in pilot phases, starting with major cities like Abuja and Lagos. Send us a message and we'll tell you when we reach your area.",
+      "Zieon meters are installed in Abuja and Lagos. Send us a message and we'll tell you when we reach your area.",
   },
   {
     question: "How do I buy units for my meter?",

@@ -85,7 +85,7 @@ const topic = ref({ datasheet: topics[1], support: topics[3] }[q(route.query.top
             </li>
             <li class="flex gap-4">
               <MapPinIcon class="h-6 w-6 shrink-0 text-brand-400" />
-              <span>Pilot cities: Abuja and Lagos, Nigeria</span>
+              <span>Abuja and Lagos, Nigeria</span>
             </li>
             <li class="flex gap-4">
               <ClockIcon class="h-6 w-6 shrink-0 text-brand-400" />
