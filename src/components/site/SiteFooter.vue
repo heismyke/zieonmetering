@@ -44,7 +44,6 @@ const columns: { title: string; links: NavLink[] }[] = [
   },
 ];
 
-const year = new Date().getFullYear();
 </script>
 
 <template>
@@ -75,7 +74,7 @@ const year = new Date().getFullYear();
 
     <div class="border-t border-line">
       <div class="container flex flex-col gap-4 py-6 text-xs text-ink-400 md:flex-row md:items-center md:justify-between">
-        <p>© {{ year }} Zieon Metering Technologies Ltd. All rights reserved.</p>
+        <p>© Zieon Metering Technologies Ltd. All rights reserved.</p>
         <ul class="flex flex-wrap gap-x-6 gap-y-2">
           <li><RouterLink to="/contact" class="hover:text-ink-900">Privacy notice</RouterLink></li>
           <li><RouterLink to="/contact" class="hover:text-ink-900">Terms & conditions</RouterLink></li>
